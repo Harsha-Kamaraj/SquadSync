@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+
+:root {
+  --color-primary: #6366f1; /* Indigo */
+  --color-primary-light: #818cf8;
+  --color-secondary: #ec4899; /* Pink */
+  --color-accent: #14b8a6; /* Teal */
+  --color-success: #10b981; /* Emerald */
+  --color-warning: #f59e0b;
+  --color-purple: #a855f7;
+  --color-orange: #fb923c;
+  
+  --color-pastel-blue: #dbeafe;
+  --color-pastel-pink: #fce7f3;
+  --color-pastel-purple: #f3e8ff;
+  --color-pastel-green: #d1fae5;
+  --color-pastel-yellow: #fef3c7;
+}
+
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .heading-font {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.app-bg { 
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+}
+
+.app-bg-alt {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card-blur { 
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-card {
+  backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-success) 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(20, 184, 166, 0.4);
+}
+
+.input-fun {
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid transparent;
+}
+
+.input-fun:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  transform: translateY(-1px);
+}
+
+.post-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.875rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.badge-purple {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  color: white;
+}
+
+.badge-teal {
+  background: linear-gradient(135deg, #14b8a6 0%, #10b981 100%);
+  color: white;
+}
+
+.badge-orange {
+  background: linear-gradient(135deg, #fb923c 0%, #f59e0b 100%);
+  color: white;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: white;
+}
+
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.animate-in {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .glass-card {
+    padding: 1.25rem;
+  }
+  
+  .heading-font {
+    font-size: 1.5rem;
+  }
+}
