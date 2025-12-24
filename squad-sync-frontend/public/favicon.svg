@@ -1,0 +1,24 @@
+<!-- save as public/favicon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="SquadSync">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+
+  <!-- rotate entire canvas 180° around center so it appears upside-down -->
+  <g transform="rotate(180 32 32)">
+    <!-- rounded square background -->
+    <rect x="2" y="2" width="60" height="60" rx="12" fill="url(#g)"/>
+
+    <!-- stylized 'S' mark: white, bold, geometric -->
+    <path d="M20 22
+             C20 18, 28 16, 36 16
+             C44 16, 44 24, 36 26
+             C28 28, 20 30, 20 34
+             C20 38, 28 40, 36 40
+             C44 40, 44 32, 36 30"
+          fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
